@@ -65,7 +65,7 @@ I can see whizzy animations in the app
 
 ### API request rate limits and stubbing
 
-The Guardian and Aylien text summarisation APIs are severely rate-limited.
+The Guardian text summarisation APIs is severely rate-limited.
 
 **Please stub your tests so you don't exceed the daily limit.  Otherwise, all requests will be rejected and your app will stop working!**
 
@@ -113,7 +113,7 @@ curl "https://api.aylien.com/api/v1/summarize?url=http://worrydream.com/MediaFor
 * cURL [man page](https://curl.haxx.se/docs/manpage.html)
 * [Hurl](https://www.hurl.it/), a web interface for sending HTTP requests
 
----
+<!--
 
 # Getting Started with Create React App
 
@@ -145,3 +145,5 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+-->
