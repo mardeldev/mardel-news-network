@@ -1,16 +1,52 @@
 .navbar {
-  /* background-color: rgb(212, 191, 75) */
-
+  background: linear-gradient(145deg,
+      #ffffff -278.56%,
+      #6d6d6d -78.47%,
+      #11101d 91.61%);
 }
 
-.card-body {
-  /* border-style: hidden; */
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+body {
+  /* background: linear-gradient(145deg,
+      #ffffff -278.56%,
+      #b3b3b3 -78.47%,
+      #797979 91.61%); */
+}
+
+.navbar a {
+  color: whitesmoke;
+}
+
+.card:hover {}
 
 .card {
-  border-width: 0px;
+  max-width: 800px;
+  background: transparent;
+  /* border-width: 0px; */
+  border-right: 0px;
+  border-left: 0px;
+  border-radius: 0px;
+  border-style: solid;
+  border-style: none;
 }
 
-.card img {
-  border-radius: 5px;
+.card-img {
+  border-radius: 40px;
+}
+
+/* .divider {
+  border-width: 10px;
+  border-color: #6d6d6d;
+} */
+
+.navbar-toggler {
+  color: white;
+}
+
+.navbar-toggler-icon {
+  color: white;
+  filter: brightness(500);
 }

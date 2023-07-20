@@ -9,24 +9,20 @@ const NewsColumn = ({ articles }) => {
     }
     const { response } = articles;
     return (
-        <section className="news-col py-3">
-
-            <div className={`card container-fluid ${styles.flexCenter}`}>
-                <img src="https://media.guim.co.uk/526802e87e837142de4c0c854e8a95a7740dd197/0_65_6078_3647/500.jpg" className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <h5 className={`card-title ${styles.flexCenter}`}>Card title</h5>
-                    <a href="#" className={`btn btn-dark ${styles.flexCenter}`}>Go somewhere</a>
-                </div>
-            </div>
-            <div>
-                {response.results.map((result, index) => (
-                    <div>
-                        {/* <p>{response.results[index].fields.headline}</p> */}
-                        <p>{result.fields.headline}</p>
+        <section className="news-col">
+            {response.results.map((result, index) => (
+                <div className={`card container-fluid ${styles.flexCenter} py-3 mt-4 mb-4`}>
+                    <div className={`row container-fluid ${styles.flexCenter} `}>
+                        <img src={result.fields.thumbnail} className="card-img-top card-img" alt={result.fields.id} />
+                        <div className={`container-fluid card-body justify-content-center`}>
+                            <h5 className={`card-title text-center fs-3 fw-bolder py-2`}>{result.fields.headline}</h5>
+                            <a href="#" className={`btn btn-dark card-button ${styles.flexCenter}`}>Go somewhere</a>
+                        </div>
                     </div>
-                ))}
+                </div>
 
-            </div>
+            ))}
+
 
         </section>
 
