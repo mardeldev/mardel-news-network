@@ -7,7 +7,7 @@ import { Navbar, NewsColumn } from './components';
 const App = () => (
   <div >
     <div >
-      <div>
+      <div >
         <Navbar />
       </div>
     </div>
