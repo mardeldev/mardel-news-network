@@ -1,46 +1,10 @@
-.navbar {
-  background: linear-gradient(145deg,
-      #ffffff -278.56%,
-      #6d6d6d -78.47%,
-      #11101d 91.61%);
-}
-
-p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-body {
-  /* background: linear-gradient(145deg,
-      #ffffff -278.56%,
-      #b3b3b3 -78.47%,
-      #797979 91.61%); */
+* {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .navbar a {
   color: whitesmoke;
 }
-
-.card:hover {}
-
-.card {
-  max-width: 800px;
-  background: transparent;
-  /* border-width: 0px; */
-  border-right: 0px;
-  border-left: 0px;
-  border-radius: 0px;
-  border-style: solid;
-  border-style: none;
-}
-
-.card-img {
-  border-radius: 40px;
-}
-
-/* .divider {
-  border-width: 10px;
-  border-color: #6d6d6d;
-} */
 
 .navbar-toggler {
   color: white;
@@ -49,4 +13,27 @@ body {
 .navbar-toggler-icon {
   color: white;
   filter: brightness(500);
+}
+
+.card {
+  max-width: 800px;
+  background: transparent;
+  /* border-width: 0px; */
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 0px;
+  border-radius: 20px;
+  /* border-style: none; */
+}
+
+.card:hover {
+  background-color: rgb(250, 243, 235);
+  box-shadow: 10%;
+}
+
+
+.card-img {
+  border-radius: 40px;
+  border-width: 20px;
+  border-color: aliceblue;
 }

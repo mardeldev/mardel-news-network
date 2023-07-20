@@ -3,7 +3,7 @@ import styles from "../style";
 const Navbar = () => {
     return (
 
-        <nav className="navbar navbar-expand-lg ">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
 
             <div className={`container-fluid `} >
                 <a className="navbar-brand" href="#">Mardel News Network</a>

@@ -4,6 +4,7 @@ import { Navbar, NewsColumn } from './components';
 
 import { getNewsArticle } from "./dataService";
 import { useState, useEffect } from "react";
+import Header from './components/Header';
 
 
 const App = () => {
@@ -14,9 +15,10 @@ const App = () => {
     const data = await getNewsArticle();
     if (data?.error) {
       console.log(data.error.message);
-      setArticle([]);
+      // setArticle([]);
     } else {
-      setArticle(data);
+      const { results } = data;
+      setArticle(results);
     }
   }
 
@@ -30,6 +32,9 @@ const App = () => {
       <div >
         <div >
           <Navbar />
+        </div>
+        <div>
+          <Header />
         </div>
       </div>
 
