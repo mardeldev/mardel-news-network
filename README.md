@@ -72,7 +72,7 @@ The Guardian and Aylien text summarisation APIs are severely rate-limited.
 ### Guardian API example
 
 **Please stub your tests to avoid exceeding the API rate limit**
-
+<!--
 If you wanted to get the content of an article from the Guardian API, this is the cURL request you might make.  Notice how it has a query parameter for `api-key`.
 
 ```sh
@@ -83,6 +83,7 @@ curl "https://content.guardianapis.com/search?q=coronavirus&show-fields=body&api
 # Single Item endpoint
 curl "https://content.guardianapis.com/world/2021/mar/22/link-between-diabetes-and-coronavirus-infections?show-fields=body&api-key=API_KEY"
 ```
+-->
 
 #### Example request data
 
