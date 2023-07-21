@@ -3,12 +3,18 @@ import styles from '../style';
 
 const Header = () => {
     return (
-        <div className={`${styles.flexCenter} mt-3`} >
-
-            <h1 className='display-6 text-bold fw-bold'>
-                News
-            </h1>
-            {/* <h5><span class="badge bg-secondary">New</span></h5> */}
+        <div className={`hero ${styles.flexCenter}`} >
+            <div className={` row ${styles.boxWidth}`}>
+                <h3 className={`heading fs-1 fw-bold align-middle text-center ${styles.flexCenter}`}>
+                    Bringing you the latest news
+                </h3>
+                <p className={`${styles.flexCenter}`}>
+                    Trusted, unbiased and relevant news for everyone
+                </p>
+                <p className={`fw-light ${styles.flexCenter}`}>
+                    <small>By Aimable Mardel</small>
+                </p>
+            </div>
 
         </div>
 

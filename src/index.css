@@ -1,5 +1,5 @@
 * {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  font-family: 'Times New Roman', Times, serif
 }
 
 .navbar a {
@@ -15,15 +15,23 @@
   filter: brightness(500);
 }
 
+.hero {
+  background-image: url("./assets/hero-img.webp");
+  height: 220px;
+}
+
+.heading {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
 .card {
-  max-width: 800px;
+  max-width: 500px;
   background: transparent;
   /* border-width: 0px; */
   border-right: 0px;
   border-left: 0px;
-  border-bottom: 0px;
-  border-radius: 20px;
-  /* border-style: none; */
+  border-radius: 0px;
+  border-style: none;
 }
 
 .card:hover {
@@ -33,7 +41,11 @@
 
 
 .card-img {
-  border-radius: 40px;
+  border-radius: 0px;
   border-width: 20px;
   border-color: aliceblue;
+}
+
+.btn {
+  max-width: 200px;
 }

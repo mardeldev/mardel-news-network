@@ -15,9 +15,9 @@ const NewsColumn = ({ articles }) => {
                 <div className={`card container-fluid ${styles.flexCenter} py-3 mt-4 mb-4`} key={index}>
                     <div className={`row container-fluid ${styles.flexCenter} `}>
                         <img src={result.fields.thumbnail} className="card-img-top card-img mt-5" alt={result.fields.id} />
-                        <div className={`container-fluid card-body justify-content-center`}>
-                            <h5 className={`card-title text-center fs-3 fw-normal py-2`}>{result.fields.headline}</h5>
-                            <a href="#" className={`btn btn-secondary card-button ${styles.flexCenter}`}>Go somewhere</a>
+                        <div className={`row d-flex container-fluid card-body justify-content-center`}>
+                            <h5 className={`card-title text-center fs-5 fw-normal py-2`}>{result.fields.headline}</h5>
+                            <a href="#" className={`btn btn-secondary card-button ${styles.flexCenter}`}>Read on...</a>
                         </div>
                     </div>
                 </div>
