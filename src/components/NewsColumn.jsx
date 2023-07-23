@@ -1,17 +1,35 @@
 import React from "react";
 import styles from "../style";
+import { getNewsArticle } from "../dataService";
+import { useState, useEffect } from "react";
 
-const NewsColumn = ({ articles }) => {
-    // const { results } = articles;
+const NewsColumn = ({ }) => {
 
 
-    if (!articles || articles.length === 0) {
-        return <p>No articles to display.</p>;
+    const [article, setArticle] = useState([]);
+
+    const getData = async () => {
+        const data = await getNewsArticle();
+        if (data?.error) {
+            console.log(data.error.message);
+            setArticle([]);
+        } else {
+            const { results } = data;
+            setArticle(results);
+        }
+    }
+    useEffect(() => {
+        getData()
+    }, [])
+
+
+    if (!article || article.length === 0) {
+        return <p>No article to display.</p>;
     }
 
     return (
         <section className="news-col">
-            {articles.map((result, index) => (
+            {article.map((result, index) => (
                 <div className={`card container-fluid ${styles.flexCenter} py-3 mt-4 mb-4`} key={index}>
                     <div className={`row container-fluid ${styles.flexCenter} `}>
                         <img src={result.fields.thumbnail} className="card-img-top card-img mt-5" alt={result.fields.id} />

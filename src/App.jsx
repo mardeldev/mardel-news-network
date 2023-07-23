@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './style';
-import { Navbar, NewsColumn } from './components';
+import { Home, Header, Navbar, NewsColumn } from './components';
 
 import { getNewsArticle } from "./dataService";
 import { useState, useEffect } from "react";
-import Header from './components/Header';
+
+
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 
 const App = () => {
@@ -15,35 +17,24 @@ const App = () => {
     const data = await getNewsArticle();
     if (data?.error) {
       console.log(data.error.message);
-      // setArticle([]);
+      setArticle([]);
     } else {
       const { results } = data;
       setArticle(results);
     }
   }
-
-
   useEffect(() => {
     getData()
   }, [])
 
   return (
-    <div >
-      <div >
-        <div >
-          <Navbar />
-        </div>
-        <div>
-          <Header />
-        </div>
-      </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home articles={article} />} />
 
-      <div>
-        <div>
-          <NewsColumn articles={article} />
-        </div>
-      </div>
-    </div>
+      </Routes>
+    </Router>
+
   )
 }
 
