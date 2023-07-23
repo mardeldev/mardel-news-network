@@ -1,37 +1,26 @@
-import React from 'react';
-import styles from './style';
-import { Home, Header, Navbar, NewsColumn } from './components';
-
-import { getNewsArticle } from "./dataService";
+import { Home, Article } from './components';
+import { getData } from "./utils/getData";
 import { useState, useEffect } from "react";
-
-
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
-
-const App = () => {
+const App = ({ }) => {
 
   const [article, setArticle] = useState([]);
-
-  const getData = async () => {
-    const data = await getNewsArticle();
-    if (data?.error) {
-      console.log(data.error.message);
-      setArticle([]);
-    } else {
-      const { results } = data;
-      setArticle(results);
-    }
-  }
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    getData()
+    getData({ setArticle })
+    setIsLoading(false)
   }, [])
+
+  if (isLoading) {
+    return <p>Loading...</p>
+  }
 
   return (
     <Router>
       <Routes>
         <Route path='/' element={<Home articles={article} />} />
-
+        <Route path='/article/:id' element={<Article articles={article} />} />
       </Routes>
     </Router>
 

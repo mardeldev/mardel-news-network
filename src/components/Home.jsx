@@ -1,12 +1,12 @@
 import { Header, Navbar, NewsColumn } from './index';
-import { getNewsArticle } from "../dataService";
 
-const Home = () => {
+const Home = ({ articles }) => {
+    console.log(articles)
     return (
         <div>
             <Navbar />
             <Header />
-            <NewsColumn />
+            <NewsColumn articles={articles} />
         </div>
     )
 }
