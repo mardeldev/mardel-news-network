@@ -14,7 +14,7 @@ const NewsColumn = ({ articles }) => {
                     <div className={`row container-fluid ${styles.flexCenter} `}>
                         <img src={result.fields.thumbnail} className="card-img-top card-img mt-5" alt={result.fields.id} />
                         <div className={`row d-flex container-fluid card-body justify-content-center`}>
-                            <h5 className={`card-title text-center fs-5 fw-normal py-2`}>{result.fields.headline}</h5>
+                            <Link to={`/article/${result.id.replace(/\//g, '_')}`} className={`card-title text-center fs-5 fw-normal py-2`}>{result.fields.headline}</Link>
                             <Link className={`btn btn-secondary card-button ${styles.flexCenter}`}
                                 to={`/article/${result.id.replace(/\//g, '_')}`}>
                                 Read on...

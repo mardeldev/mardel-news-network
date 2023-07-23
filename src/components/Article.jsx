@@ -19,14 +19,15 @@ const Article = ({ articles }) => {
         <div>
             <Navbar />
             <section className={`row ${styles.flexCenter} ${styles.boxWidth}`}>
-                <h1 className={`text-center py-5`}>{article.fields.headline}</h1>
-                <Link className={` btn-secondary card-button ${styles.flexCenter}`}
-                    to={article.webUrl}> Read the full article on The Guardian's website here...
-                </Link>
+                <div className={`d-inline-flex ${styles.flexCenter}`}>
+                    <Link to={article.webUrl} className={`text-center fs-3 fw-medium mt-5 mb-2 article-link`} target="_blank">{article.fields.headline}</Link>
+                </div>
+
+                <p className="text-center fw-lighter fst-italic"><small>Click on the headline above to go to the original article</small></p>
                 {/* <a href={article.webUrl} className="text-center fs-4"></a> */}
-                <img className={`article-img py-3`} src={article.fields.thumbnail} alt={article.webTitle} />
-                <h1 className="text-center py-4">Summary</h1>
-                <p className={`text-break text-center article-text py-2`}>{article.fields.bodyText}</p>
+                <img className={`article-img`} src={article.fields.thumbnail} alt={article.webTitle} />
+                <h2 className="text-center mt-4">Summary</h2>
+                <p className={`text-break text-center article-text py-1`}>{article.fields.bodyText}</p>
 
             </section>
         </div>

@@ -51,6 +51,11 @@
 
 .article-text {
   max-width: 1000px;
+}
+
+.article-link {
+  color: black;
+  text-decoration: none;
 
 }
 
