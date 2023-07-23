@@ -1,8 +1,5 @@
 import styles from "../style";
-import { getData } from "../utils/getData";
-import { useState, useEffect } from "react";
-
-
+import { Link } from "react-router-dom";
 
 const NewsColumn = ({ articles }) => {
 
@@ -18,7 +15,11 @@ const NewsColumn = ({ articles }) => {
                         <img src={result.fields.thumbnail} className="card-img-top card-img mt-5" alt={result.fields.id} />
                         <div className={`row d-flex container-fluid card-body justify-content-center`}>
                             <h5 className={`card-title text-center fs-5 fw-normal py-2`}>{result.fields.headline}</h5>
-                            <a href="#" className={`btn btn-secondary card-button ${styles.flexCenter}`}>Read on...</a>
+                            <Link className={`btn btn-secondary card-button ${styles.flexCenter}`}
+                                to={`/article/${result.id.replace(/\//g, '_')}`}>
+                                Read on...
+                            </Link>
+
                         </div>
                     </div>
                 </div>

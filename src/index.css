@@ -39,11 +39,19 @@
   box-shadow: 10%;
 }
 
-
 .card-img {
   border-radius: 0px;
   border-width: 20px;
   border-color: aliceblue;
+}
+
+.article-img {
+  max-width: 1000px;
+}
+
+.article-text {
+  max-width: 1000px;
+
 }
 
 .btn {
