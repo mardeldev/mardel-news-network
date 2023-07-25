@@ -5,7 +5,11 @@ export const getNewsArticle = async () => {
         const responseData = await axios.get("http://localhost:3000/response");
         return responseData.data;
     } catch (error) {
-        return error;
+        return { error };
     }
 }
-// http://localhost:4000/mockApiResponse
+
+
+// https://content.guardianapis.com/search?order-by=newest&show-fields=byline%2Cthumbnail%2Cheadline%2CbodyText&api-key=121530fe-30bb-4e77-af58-f964b4fb4640
+
+// http://localhost:3000/response

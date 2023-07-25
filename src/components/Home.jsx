@@ -7,6 +7,8 @@ const Home = ({ articles }) => {
             <Navbar />
             <Header />
             <NewsColumn articles={articles} />
+
+            <p>{console.log(articles)}</p>
         </div>
     )
 }

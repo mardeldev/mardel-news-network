@@ -7,10 +7,14 @@ const App = ({ }) => {
 
   const [article, setArticle] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    getData({ setArticle })
-    setIsLoading(false)
-  }, [])
+    const fetchArticles = async () => {
+      await getData({ setArticle });
+      setIsLoading(false);
+    };
+    fetchArticles();
+  }, []);
 
   if (isLoading) {
     return <p>Loading...</p>
@@ -24,8 +28,11 @@ const App = ({ }) => {
         <Route path='/article/:id' element={<Article articles={article} />} />
       </Routes>
     </Router>
-
   )
 }
 
-export default App
+
+export default App;
+
+
+
