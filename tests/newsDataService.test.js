@@ -16,5 +16,14 @@ describe('getNewsArticle tests', () => {
             // Assert
             expect(axios.get).toHaveBeenCalledWith('http://localhost:3000/response');
         })
+
+        test('2. should have a successful request with the correct data returned', async () => {
+            // Arrange
+            axios.get.mockResolvedValueOnce({ data: testArticles });
+            // Act
+            const result = await getNewsArticle();
+            // Assert
+            expect(result).toEqual(testArticles);
+        })
     })
 })
