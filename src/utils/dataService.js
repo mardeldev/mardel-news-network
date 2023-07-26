@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const getNewsArticle = async () => {
     try {
-        const responseData = await axios.get("http://localhost:3000/response");
+        const responseData = await axios.get("https://content.guardianapis.com/search?order-by=newest&show-fields=byline%2Cthumbnail%2Cheadline%2CbodyText&api-key=121530fe-30bb-4e77-af58-f964b4fb4640");
         return responseData.data;
     } catch (error) {
         return { error };
