@@ -25,5 +25,15 @@ describe('getNewsArticle tests', () => {
             // Assert
             expect(result).toEqual(testArticles);
         })
+
+        test('3. should have an unsuccessful request returning an error object', async () => {
+            // Arrange
+            const error = { message: 'Error' };
+            axios.get.mockRejectedValueOnce(error);
+            // Act
+            const result = await getNewsArticle();
+            // Assert
+            expect(result).toBe(error);
+        })
     })
 })
