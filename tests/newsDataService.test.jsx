@@ -14,7 +14,7 @@ describe('getNewsArticle tests', () => {
             // Act
             await getNewsArticle();
             // Assert
-            expect(axios.get).toHaveBeenCalledWith('http://localhost:3000/response');
+            expect(axios.get).toHaveBeenCalledWith('https://content.guardianapis.com/search?order-by=newest&show-fields=byline%2Cthumbnail%2Cheadline%2CbodyText&api-key=121530fe-30bb-4e77-af58-f964b4fb4640');
         })
 
         test('2. should have a successful request with the correct data returned', async () => {
