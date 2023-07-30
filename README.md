@@ -56,7 +56,7 @@ In order to view this webpage on your local machine, please follow the following
     ```
     
 
-- You will the following in the terminal. Ctrl+click or Cmd+click on the local URL to view the webpage:
+- You will find the following in the terminal. Ctrl+click or Cmd+click on the local URL to view the webpage:
 
 <img src="./src/assets/npm-run-dev-img.png" alt="npm run dev" width="300"/><br/>
 
@@ -132,4 +132,4 @@ I can read the site comfortably on my phone
 1. Test that getNewsArticle makes the external data call.
 2. Test that a successful request returns the correct data.
 3. Test that an unsuccessful request returns the error.
-4. Test that the correct article is chosen when a viewing an article summary page.
+4. Test that the correct article is chosen when viewing an article summary page.
